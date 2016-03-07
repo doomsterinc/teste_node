@@ -1,14 +1,24 @@
-var http = require("http");
-var fs = require("fs");
+var connect = require("connect");
+var app = connect();
 
-var server = http.createServer(function(request, response){
-	fs.readFile(__dirname + '/index.html', function(err, html){
-		response.writeHeader(200, {'Content-Type': 'text/html'});
-		response.write(html);
-		response.end();
-	});
-});
+var logger = function (req, res, next) {
+	console.log(req.method, req.url);
+	next();
+};
 
-server.listen(3000, function(){
-	console.log('Server HTTP Start')
-});
+var testing = function (req, res, next) {
+	res.setHeader('Content-Type', 'text/plain');
+	res.end('Test Node');
+};
+
+var testing_ = function () {
+	res.setHeader('Content-Type', 'text-plain');
+	res.end('Test Node 2');
+};
+
+app.use(logger);
+app.use('/test', testing);
+app.use('/testing_',testing_);
+app.listen(3000);
+
+console.log('Server running at http:localhost:3000/');
