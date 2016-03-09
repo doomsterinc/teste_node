@@ -1,0 +1,23 @@
+{
+  "name": "teste_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "connect": "^3.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doomsterinc/teste_node.git"
+  },
+  "author": "Doom",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/doomsterinc/teste_node/issues"
+  },
+  "homepage": "https://github.com/doomsterinc/teste_node#readme"
+}

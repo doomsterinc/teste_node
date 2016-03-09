@@ -21,4 +21,4 @@ app.use('/test', testing);
 app.use('/testing_',testing_);
 app.listen(3000);
 
-console.log('Server running at http:localhost:3000/');
+console.log('Server running at http:localhost:3000');
