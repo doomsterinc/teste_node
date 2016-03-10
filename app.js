@@ -8,12 +8,12 @@ var logger = function (req, res, next) {
 
 var testing = function (req, res, next) {
 	res.setHeader('Content-Type', 'text/plain');
-	res.end('Test Node');
+	res.end('Test Node Heroku');
 };
 
 var testing_ = function () {
 	res.setHeader('Content-Type', 'text-plain');
-	res.end('Test Node 2');
+	res.end('Test Node Heroku 2');
 };
 
 app.use(logger);
