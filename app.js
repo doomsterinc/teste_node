@@ -1,4 +1,4 @@
-var connect = require("connect");
+cvar connect = require("connect");
 var app = connect();
 
 var logger = function (req, res, next) {
